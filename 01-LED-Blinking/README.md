@@ -1,1 +1,12 @@
+# LED Blinking
 
+This is my first Arduino project built and simulated using Wokwi.
+
+## Components
+- Arduino UNO
+- LED
+- 220Ω Resistor
+- Jumper Wires
+
+## Working
+The LED turns ON for 1 second and OFF for 1 second repeatedly.
