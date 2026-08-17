@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Pathangi  Sindhu priya",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 16.2,
+      "left": -142.6,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 178.8,
+      "left": 282.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -153.9,
+      "left": 186.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 115.4, "left": 336, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 216,
+      "left": 383.45,
+      "rotate": 90,
+      "attrs": { "value": "220000" }
+    }
+  ],
+  "connections": [
+    [ "ldr1:VCC", "uno:5V", "red", [ "v115.2", "h-432", "v67.2" ] ],
+    [ "ldr1:GND", "uno:GND.2", "black", [ "v96", "h-441.2", "v96" ] ],
+    [ "ldr1:AO", "uno:A0", "green", [ "v76.8", "h-440.9", "v144" ] ],
+    [ "uno:8", "relay1:IN", "green", [ "h0" ] ],
+    [ "relay1:GND", "uno:GND.1", "black", [ "h-220.8", "v-48.4" ] ],
+    [ "relay1:VCC", "uno:5V", "violet", [ "h0" ] ],
+    [ "relay1:COM", "uno:5V", "green", [ "h78", "v133", "h-652.8", "v-153.6" ] ],
+    [ "relay1:NO", "r1:1", "purple", [ "h58.8", "v36.6" ] ],
+    [ "led1:A", "r1:2", "purple", [ "v0" ] ],
+    [ "led1:C", "uno:GND.3", "black", [ "v38.4", "h-441.2", "v-96" ] ]
+  ],
+  "dependencies": {}
+}
